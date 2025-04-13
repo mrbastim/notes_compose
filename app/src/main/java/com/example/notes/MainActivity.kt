@@ -20,9 +20,17 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.notes.ui.theme.NotesTheme
+import com.example.notesappcompose.HomeActivity
+import com.example.notesappcompose.NoteActivity
 
 
 class MainActivity : ComponentActivity() {
+
+    private val isHomeInitialize = mutableStateOf(false)
+    private val isNoteInitialize = mutableStateOf(false)
+    private lateinit var home : HomeActivity
+    private lateinit var note : NoteActivity
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,8 +81,5 @@ class MainActivity : ComponentActivity() {
 
 }
 
-private val isHomeInitialize = mutableStateOf(false)
-private val isNoteInitialize = mutableStateOf(false)
-private lateinit var home : HomeActivity
-private lateinit var note : NoteActivity
+
 
